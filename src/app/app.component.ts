@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { version } from '../../package.json';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,9 @@ import { version } from '../../package.json';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = `angular-hw v${version}`;
-
-  constructor() {
-    console.log(version, this.baseVersion(version));
-  }
+  title = `angular-hw (v${version}, base version: ${this.baseVersion(
+    version
+  )}, mode: ${environment.mode})`;
 
   private baseVersion(ver: string): string {
     const convertStringToInt = (item: string): number =>
