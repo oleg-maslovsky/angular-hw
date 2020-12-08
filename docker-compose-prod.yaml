@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  hello-world-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        buildscript: build-prod
+        mode: prod
+    restart: always
+    ports:
+      - 80:80
+      - 443:443

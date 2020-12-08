@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  hello-world-stage:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        buildscript: build-stage
+        mode: stage
+    restart: always
+    ports:
+      - 80:80
+      - 443:443

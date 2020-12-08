@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  hello-world-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        buildscript: build
+        mode: dev
+    restart: always
+    ports:
+      - 4200:80
+      - 443:443

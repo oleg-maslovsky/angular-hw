@@ -1,13 +1,15 @@
 {
   "name": "angular-hw",
-  "version": "0.0.1-beta.2",
+  "version": "0.0.1-beta.3",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "config": "node set-env.js",
+    "start": "npm run config && ng serve",
     "start-stage": "ng serve -c stage",
     "start-prod": "ng serve --prod",
     "build": "ng build",
     "build-stage": "ng build -c stage",
+    "build-prod": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -30,9 +32,9 @@
     "@angular-devkit/build-angular": "~0.1100.3",
     "@angular/cli": "~11.0.3",
     "@angular/compiler-cli": "~11.0.3",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.19.8",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",

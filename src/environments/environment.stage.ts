@@ -1,4 +1,6 @@
+import { externEnvironment } from './extern-environment';
+
 export const environment = {
   production: true,
-  mode: 'STAGE',
+  mode: externEnvironment.mode,
 };

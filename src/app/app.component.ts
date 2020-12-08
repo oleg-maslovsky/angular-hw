@@ -16,7 +16,7 @@ export class AppComponent {
     const convertStringToInt = (item: string): number =>
       Number.parseInt(item, 10) || 0;
 
-    const arr = version.split('.');
+    const arr = ver.split('.');
     return `${convertStringToInt(arr[0])}.${convertStringToInt(
       arr[1]
     )}.${convertStringToInt(arr[2])}`;
