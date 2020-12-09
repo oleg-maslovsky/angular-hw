@@ -1,7 +1,8 @@
 version: "3"
 
 services:
-  hello-world-prod:
+  prod:
+    image: test-prod:0.0.1-beta.4
     build:
       context: .
       dockerfile: Dockerfile

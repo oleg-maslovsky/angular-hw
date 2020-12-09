@@ -8,7 +8,7 @@ import { environment } from '../environments/environment';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = `angular-hw (v${version}, base version: ${this.baseVersion(
+  title = `Angular-HW (v${version}, base version: ${this.baseVersion(
     version
   )}, mode: ${environment.mode})`;
 
