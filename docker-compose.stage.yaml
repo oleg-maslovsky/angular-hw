@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
       args:
         buildscript: build-stage
-        mode: stage
+        MODE: stage
     restart: always
     ports:
       - 80:80

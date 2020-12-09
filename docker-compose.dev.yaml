@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
       args:
         buildscript: build
-        mode: dev
+        MODE: dev
     restart: always
     ports:
       - 4200:80
