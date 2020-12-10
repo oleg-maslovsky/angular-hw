@@ -1,6 +1,6 @@
 FROM node:alpine as node
-ARG MODE
 ARG buildscript
+ARG MODE
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
@@ -9,7 +9,8 @@ RUN npm run config
 RUN npm run ${buildscript}
 
 FROM nginx:alpine
-COPY nginx.conf /etc/nginx/nginx.conf
+ARG nginxconf
+COPY ${nginxconf} /etc/nginx/nginx.conf
 COPY --from=node /app/dist/angular-hw/ /usr/share/nginx/html
 EXPOSE 80
 EXPOSE 443

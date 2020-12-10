@@ -8,8 +8,9 @@ services:
       dockerfile: Dockerfile
       args:
         buildscript: build-prod
+        nginxconf: nginx.prod.conf
         MODE: prod
     restart: always
     ports:
       - 80:80
-      - 443:443
+        - 443:443

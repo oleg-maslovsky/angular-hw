@@ -8,6 +8,7 @@ services:
       dockerfile: Dockerfile
       args:
         buildscript: build-stage
+        nginxconf: nginx.stage.conf
         MODE: stage
     restart: always
     ports:

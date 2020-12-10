@@ -4,3 +4,4 @@ e2e
 node_modules
 *.md 
 extern-environment.ts
+certs

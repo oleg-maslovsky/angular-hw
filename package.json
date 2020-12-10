@@ -4,7 +4,10 @@
   "scripts": {
     "ng": "ng",
     "config": "node set-env.js",
-    "start": "npm run config && ng serve",
+    "start": "npm run config && npm run serve-http",
+    "start-ssl": "npm run config && npm run serve-ssl",
+    "serve-http": "ng serve",
+    "serve-ssl": "ng serve --ssl --ssl-cert certs/localhost.crt --ssl-key certs/localhost.key",
     "start-stage": "ng serve -c stage",
     "start-prod": "ng serve --prod",
     "build": "ng build",
