@@ -1,0 +1,11 @@
+FROM node:alpine as node
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run config
+RUN npm run build-stage
+
+FROM nginx:alpine
+COPY --from=node /app/dist/angular-hw/ /usr/share/nginx/html
+EXPOSE 80
