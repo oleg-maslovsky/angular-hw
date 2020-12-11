@@ -1,10 +1,12 @@
 FROM node:alpine as node
+ARG buildscript
+ARG MODE
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run config
-RUN npm run build-stage
+RUN npm run ${buildscript}
 
 FROM nginx:alpine
 COPY --from=node /app/dist/angular-hw/ /usr/share/nginx/html
