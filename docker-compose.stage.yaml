@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  hello-world-stage:
+  angular-hw:
     build:
       context: .
       dockerfile: Dockerfile
