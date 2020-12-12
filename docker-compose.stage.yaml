@@ -2,6 +2,7 @@ version: "3"
 
 services:
   angular-hw:
+    image: olegmaslovsky/scanappweb-stage
     build:
       context: .
       dockerfile: Dockerfile
